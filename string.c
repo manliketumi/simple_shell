@@ -44,3 +44,26 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (*s1 - *s2);
 }
+/**
+ * _strcat - function concatenates two strings
+ * @dest: the first input string
+ * @src: the second input string
+ * Return: destination 
+ */
+char *_strcat(char *dest, const char *src)
+{
+	int i;
+	int j;
+
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[i] = src[j];
+		i++;
+	}
+
+	dest[i] = '\0';
+	return (dest);
+}

@@ -51,18 +51,4 @@ print_error(info, "can't cd to ");
 _eputs(info->argv[1]), _eputchar('\n');
 return (1);
 }
-
-if (_setenv(info, "OLDPWD", _getenv(info, "PWD=")) != 0)
-{
-_puts("Error setting OLDPWD environment variable\n");
-return (1);
-}
-
-if (_setenv(info, "PWD", getcwd(buffer, 1024)) != 0)
-{
-_puts("Error setting PWD environment variable\n");
-return (1);
-}
-
-return (0);
 }
