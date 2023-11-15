@@ -62,8 +62,7 @@ void execute_command(const char *command)
 }
 /**
  * main - function orchestrates these calls
- * @argc: argument command
- * @argv: argument value of the prompt
+ *
  * Return: 0 on success
  */
 int main(void)
