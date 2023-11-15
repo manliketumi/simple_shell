@@ -45,26 +45,3 @@ ssize_t my_getline(char **lineptr, size_t *n, FILE *stream)
 	(*lineptr)[len] = '\0';
 	return (len);
 }
-
-/**
- * main - Entry point
- *
- * Return: getline
- */
-int main(void)
-{
-	char *line = NULL;
-	size_t len = 0;
-	ssize_t read;
-
-	printf("Enter a line: ");
-	read = my_getline(&line, &len, stdin);
-
-	if (read != -1)
-	{
-		printf("You entered: %s\n", line);
-	}
-
-	free(line);
-	return (0);
-}
