@@ -23,7 +23,7 @@ int _isalpha(int c);
 int _atoi(char *s);
 
 int _putchar(char c);
-int main();
+int main(void);
 void print_prompt(void);
 void execute_command(const char *command);
 char *read_command(void);

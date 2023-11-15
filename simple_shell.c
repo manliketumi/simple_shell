@@ -38,7 +38,7 @@ void execute_command(const char *command)
 	char *envp[] = { NULL };
 	pid_t pid;
 
-	argv[0] = (char *)command; 
+	argv[0] = (char *)command;
 	argv[1] = NULL;
 
 	pid = fork();
@@ -66,7 +66,7 @@ void execute_command(const char *command)
  * @argv: argument value of the prompt
  * Return: 0 on success
  */
-int main()
+int main(void)
 {
 	char *command;
 
