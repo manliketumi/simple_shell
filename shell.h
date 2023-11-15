@@ -17,6 +17,7 @@
 #define MAX_COMMAND_LEN 100
 #define DELIMS " \t\r\n"
 #define PROMPT "$ "
+#define INITIAL_BUFFER_SIZE 100
 
 int _isalpha(int c);
 int _atoi(char *s);
@@ -36,6 +37,6 @@ char *_strcpy(char *dest, const char *src);
 char **parse_command(char *input);
 void ex_com(char **argv);
 
-
+ssize_t my_getline(char **lineptr, size_t *n, FILE *stream);
 
 #endif
