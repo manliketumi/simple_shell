@@ -1,16 +1,16 @@
 #include "shell.h"
 
 /**
- * rev_string - 
- * @s: 
- * Return: 
+ * rev_string - function print a string in reverse
+ * @s: string to be printed
+ * Return: 0 on success
  */
 void rev_string(char *s)
 {
 	int count = 0, i, j;
 	char *str, temp;
 
-	while (count >= 0)
+	while (count > 0)
 	{
 		if (s[count] == '\0')
 			break;

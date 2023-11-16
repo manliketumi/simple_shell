@@ -34,9 +34,9 @@ int _strlen(const char *s)
 }
 
 /**
- * cmp_chars - function
- * @str: 
- * @delim: 
+ * cmp_chars - function compare characters
+ * @str: string
+ * @delim: the delim
  *
  * Return: 0 on success
  */
@@ -61,11 +61,11 @@ int cmp_chars(char str[], const char *delim)
 }
 
 /**
- * _strtok - 
- * @str: 
- * @delim: 
+ * _strtok - function prints string token
+ * @str: string
+ * @delim: the delim
  *
- * Return: 
+ * Return: void
  */
 char *_strtok(char str[], const char *delim)
 {
@@ -77,21 +77,21 @@ char *_strtok(char str[], const char *delim)
 	{
 		if (cmp_chars(str, delim))
 			return (NULL);
-		splitted = str; 
+		splitted = str;
 		i = _strlen(str);
-		str_end = &str[i]; 
+		str_end = &str[i];
 	}
 	str_start = splitted;
-	if (str_start == str_end) 
+	if (str_start == str_end)
 		return (NULL);
 
 	for (bool = 0; *splitted; splitted++)
 	{
-		
+
 		if (splitted != str_start)
 			if (*splitted && *(splitted - 1) == '\0')
 				break;
-		
+
 		for (i = 0; delim[i]; i++)
 		{
 			if (*splitted == delim[i])
@@ -102,16 +102,16 @@ char *_strtok(char str[], const char *delim)
 				break;
 			}
 		}
-		if (bool == 0 && *splitted) 
+		if (bool == 0 && *splitted)
 			bool = 1;
 	}
-	if (bool == 0) 
+	if (bool == 0)
 		return (NULL);
 	return (str_start);
 }
 
 /**
- * _isdigit - function  
+ * _isdigit - function print an integer
  *
  * @s: string
  * Return: 1 if success

@@ -18,9 +18,6 @@
 #define DELIMS " \t\r\n"
 #define PROMPT "$ "
 #define INITIAL_BUFFER_SIZE 100
-#define BUFSIZE 1024
-#define TOK_BUFSIZE 128
-#define TOK_DELIM " \t\r\n\a"
 
 extern char **environ;
 
@@ -55,13 +52,6 @@ char **parse_command(char *input);
 void ex_com(char **argv);
 
 ssize_t my_getline(char **lineptr, size_t *n, FILE *stream);
-
-void cd_dot(data_shell *datash);
-void cd_to(data_shell *datash);
-void cd_previous(data_shell *datash);
-void cd_to_home(data_shell *datash);
-
-int (*get_builtin(char *cmd))(data_shell *datash);
 
 char *_strdup(const char *s);
 int _strlen(const char *s);

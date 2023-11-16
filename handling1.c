@@ -28,9 +28,9 @@ int get_len(int n)
 	return (lenght);
 }
 /**
- * aux_itoa -  
- * @n: 
- * Return: 
+ * aux_itoa - function locates the length
+ * @n: the length
+ * Return: void
  */
 char *aux_itoa(int n)
 {
@@ -66,9 +66,9 @@ char *aux_itoa(int n)
 }
 
 /**
- * _atoi - 
- * @s: 
- * Return: .
+ * _atoi - the buffsize
+ * @s: string
+ * Return: buffer
  */
 int _atoi(char *s)
 {
