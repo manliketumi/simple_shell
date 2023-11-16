@@ -29,7 +29,7 @@ void print_prompt(void);
 void execute_command(const char *command);
 char *read_command(void);
 
-int _strcmp(const char *s1,const char *s2);
+int _strcmp(const char *s1, const char *s2);
 int _strspn(char *s, char *accept);
 char *_strcat(char *dest, char *src);
 char *_strchr(char *s, char c);
